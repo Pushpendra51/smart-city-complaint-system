@@ -19,8 +19,8 @@ router.post("/", auth, upload.single("image"), async (req, res) => {
             urgency,
             description,
             location,
-            latitude: latitude ? parseFloat(latitude) : null,
-            longitude: longitude ? parseFloat(longitude) : null,
+            latitude: (latitude && !isNaN(parseFloat(latitude))) ? parseFloat(latitude) : null,
+            longitude: (longitude && !isNaN(parseFloat(longitude))) ? parseFloat(longitude) : null,
             imageUrl: req.file ? `/uploads/${req.file.filename}` : null
         };
 
@@ -79,70 +79,36 @@ router.get("/map-data", async (req, res) => {
 // GET complaints sorted by priority
 router.get("/priority", auth, adminOnly, async (req, res) => {
     try {
-
         const complaints = await Complaint.find().sort({ priority: -1 });
-
         res.json(complaints);
-
     } catch (error) {
-
         res.status(500).json({ error: error.message });
-
     }
 });
 // Resolve complaint
 router.put("/resolve/:id", auth, adminOnly, async (req, res) => {
-
   try {
-
     const complaint = await Complaint.findByIdAndUpdate(
       req.params.id,
       { status: "Resolved" },
       { new: true }
     );
-
     res.json({
       message: "Complaint resolved successfully",
       complaint
     });
-
   } catch (error) {
-
     res.status(500).json({ error: error.message });
-
   }
-
 });
 // Delete complaint
 router.delete("/:id", auth, adminOnly, async (req, res) => {
-
   try {
-
     const complaint = await Complaint.findByIdAndDelete(req.params.id);
-
     res.json({
       message: "Complaint deleted successfully",
       complaint
     });
-
-  } catch (error) {
-
-    res.status(500).json({ error: error.message });
-
-  }
-
-});
-
-// Update admin remark
-router.put("/remark/:id", auth, adminOnly, async (req, res) => {
-  try {
-    const { remark } = req.body;
-    const complaint = await Complaint.findByIdAndUpdate(
-      req.params.id,
-      { adminRemark: remark },
-      { new: true }
-    );
-    res.json({ message: "Remark updated successfully", complaint });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

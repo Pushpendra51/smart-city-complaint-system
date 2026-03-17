@@ -43,13 +43,6 @@ function AdminDashboard() {
     } catch (err) { toast.error("Failed to update status."); }
   };
 
-  const updateRemark = async (id, remark) => {
-    try {
-      await api.put(`/api/complaint/remark/${id}`, { remark });
-      toast.success("Remark updated.");
-      fetchComplaints();
-    } catch (err) { toast.error("Failed to update remark."); }
-  };
 
   const deleteComplaint = async (id) => {
     if (!window.confirm("Are you sure you want to delete this complaint?")) return;
@@ -243,27 +236,6 @@ function AdminDashboard() {
                                 <button title="Resolve" onClick={() => updateStatus(c._id, "Resolved")} style={{ padding: "0.5rem", borderRadius: "8px", cursor: "pointer", background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.2)", color: "#34d399" }}>✅</button>
                               )}
                               <button title="Delete" onClick={() => deleteComplaint(c._id)} style={{ padding: "0.5rem", borderRadius: "8px", cursor: "pointer", background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.2)", color: "#fca5a5" }}>🗑️</button>
-                            </div>
-                            <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-                                <input 
-                                  placeholder="Add Remark..."
-                                  defaultValue={c.adminRemark || ""}
-                                  onBlur={(e) => {
-                                    if (e.target.value !== (c.adminRemark || "")) {
-                                      updateRemark(c._id, e.target.value);
-                                    }
-                                  }}
-                                  style={{
-                                    flex: 1,
-                                    fontSize: "0.8rem",
-                                    padding: "4px 8px",
-                                    borderRadius: "6px",
-                                    background: theme.mode === "dark" ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.02)",
-                                    border: `1px solid ${theme.cardBorder}`,
-                                    color: theme.textPrimary,
-                                    outline: "none"
-                                  }}
-                                />
                             </div>
                           </div>
                         </td>
