@@ -21,6 +21,7 @@ function Login() {
       localStorage.setItem("user", JSON.stringify(res.data.user));
       navigate(res.data.user.role === "admin" ? "/admin" : "/dashboard");
     } catch (err) {
+      console.error("Google Login Error:", err);
       setError("Google Login failed. Please try again.");
     } finally {
       setLoading(false);
@@ -37,6 +38,7 @@ function Login() {
       localStorage.setItem("user", JSON.stringify(res.data.user));
       navigate(res.data.user.role === "admin" ? "/admin" : "/dashboard");
     } catch (err) {
+      console.error("Login Error:", err);
       setError(err.response?.data?.message || "Login failed. Please try again.");
     } finally {
       setLoading(false);

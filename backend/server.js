@@ -8,18 +8,36 @@ const complaintRoutes = require("./routes/complaintRoutes");
 const app = express();
 
 // Connect to MongoDB
-connectDB();
+const dbStatus = { connected: false, error: null };
+connectDB().then(() => {
+  dbStatus.connected = true;
+}).catch(err => {
+  dbStatus.error = err.message;
+});
 
 // Middleware
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "http://127.0.0.1:3000",
+  "http://127.0.0.1:3001",
+].filter(Boolean);
+
+console.log("Allowed CORS Origins:", allowedOrigins);
+
 app.use(
   cors({
-    origin: [
-      process.env.FRONTEND_URL,
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "http://127.0.0.1:3000",
-      "http://127.0.0.1:3001",
-    ].filter(Boolean),
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps or curl)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        console.error(`CORS Blocked Origin: ${origin}`);
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
@@ -32,7 +50,14 @@ app.use("/api/complaint", complaintRoutes);
 
 // Health check
 app.get("/", (req, res) => {
-  res.json({ message: "Smart City Complaint System Backend Running 🚀", status: "ok" });
+  const mongoose = require("mongoose");
+  const isConnected = mongoose.connection.readyState === 1;
+  res.json({ 
+    message: "Smart City Complaint System Backend Running 🚀", 
+    status: isConnected ? "ok" : "error",
+    database: isConnected ? "connected" : "disconnected",
+    timestamp: new Date().toISOString()
+  });
 });
 
 // 404 Handler

@@ -132,4 +132,20 @@ router.delete("/:id", auth, adminOnly, async (req, res) => {
   }
 
 });
+
+// Update admin remark
+router.put("/remark/:id", auth, adminOnly, async (req, res) => {
+  try {
+    const { remark } = req.body;
+    const complaint = await Complaint.findByIdAndUpdate(
+      req.params.id,
+      { adminRemark: remark },
+      { new: true }
+    );
+    res.json({ message: "Remark updated successfully", complaint });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;

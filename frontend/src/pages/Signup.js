@@ -37,6 +37,7 @@ function Signup() {
       await api.post("/api/auth/signup", { name, email, password });
       navigate("/login", { state: { message: "Account created! Please sign in." } });
     } catch (err) {
+      console.error("Signup Error:", err);
       setError(err.response?.data?.message || "Signup failed. Please try again.");
     } finally {
       setLoading(false);

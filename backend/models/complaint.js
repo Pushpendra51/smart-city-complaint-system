@@ -26,6 +26,7 @@ const ComplaintSchema = new mongoose.Schema(
     supporters: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     rating: { type: Number, min: 1, max: 5, required: false },
     feedback: { type: String, required: false },
+    adminRemark: { type: String, required: false },
   },
   { timestamps: true }
 );
