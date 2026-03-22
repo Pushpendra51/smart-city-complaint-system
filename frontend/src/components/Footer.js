@@ -71,7 +71,7 @@ const Footer = () => {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
               <img src={process.env.PUBLIC_URL + "/logo.png"} alt="Logo" style={{ width: "60px", height: "60px", objectFit: "cover", borderRadius: "50%" }} />
-              <span style={{ fontSize: "2rem", fontWeight: "900", letterSpacing: "-0.03em", color: theme.textPrimary }}>CityZen <span style={{ color: theme.accentPurple }}>CMS</span></span>
+              <span style={{ fontSize: "2rem", fontWeight: "900", letterSpacing: "-0.03em", color: theme.textPrimary }}>CityZen</span>
             </div>
             <p style={{ color: theme.textSecondary, fontSize: "1.05rem", lineHeight: "1.6", maxWidth: "320px" }}>
               Empowering urban communities with cutting-edge technology to create a more responsive, efficient, and better managed city for all.
@@ -80,7 +80,7 @@ const Footer = () => {
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: theme.textSecondary, fontSize: "0.95rem" }}>
               <span style={{ opacity: 0.7 }}>📧</span>
-              <span>support@smartcitycms.com</span>
+              <span>support@cityzen.com</span>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ const Footer = () => {
         <div>
           <h4 style={sectionTitleStyle}>Resources</h4>
           <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "1rem" }}>
-            <li><a href="mailto:support@smartcitycms.com" style={linkStyle} onMouseOver={e => e.target.style.color = theme.accentPurple} onMouseOut={e => e.target.style.color = theme.textSecondary}>24/7 Support Center</a></li>
+            <li><a href="mailto:support@cityzen.com" style={linkStyle} onMouseOver={e => e.target.style.color = theme.accentPurple} onMouseOut={e => e.target.style.color = theme.textSecondary}>24/7 Support Center</a></li>
             <li><a href="#" style={linkStyle} onMouseOver={e => e.target.style.color = theme.accentPurple} onMouseOut={e => e.target.style.color = theme.textSecondary}>Status Monitoring</a></li>
             <li><a href="#" style={linkStyle} onMouseOver={e => e.target.style.color = theme.accentPurple} onMouseOut={e => e.target.style.color = theme.textSecondary}>API Documentation</a></li>
             <li><a href="#" style={linkStyle} onMouseOver={e => e.target.style.color = theme.accentPurple} onMouseOut={e => e.target.style.color = theme.textSecondary}>System Governance</a></li>
@@ -163,7 +163,7 @@ const Footer = () => {
         color: theme.textMuted,
         fontSize: "0.9rem"
       }}>
-        <p style={{ fontWeight: "500" }}>© 2026 CityZen Complaint Management System | Developed by Pushpendra</p>
+        <p style={{ fontWeight: "500" }}>© 2026 CityZen | Developed by Pushpendra</p>
         <div style={{ display: "flex", gap: "2rem" }}>
           <a href="#" style={{ color: "inherit", textDecoration: "none", transition: "color 0.2s" }} onMouseOver={e => e.target.style.color = theme.textSecondary} onMouseOut={e => e.target.style.color = "inherit"}>Privacy Policy</a>
           <a href="#" style={{ color: "inherit", textDecoration: "none", transition: "color 0.2s" }} onMouseOver={e => e.target.style.color = theme.textSecondary} onMouseOut={e => e.target.style.color = "inherit"}>Terms of Service</a>

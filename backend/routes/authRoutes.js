@@ -150,7 +150,7 @@ router.post("/phone/send-otp", async (req, res) => {
         const twilio = require("twilio");
         const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
         await client.messages.create({
-          body: `Your CityZen CMS verification code is: ${otp}`,
+          body: `Your CityZen verification code is: ${otp}`,
           from: process.env.TWILIO_PHONE_NUMBER,
           to: phone
         });

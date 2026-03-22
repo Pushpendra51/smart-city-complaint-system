@@ -24,7 +24,7 @@ const AboutUs = () => {
         {/* Hero Section */}
         <section style={{ textAlign: "center", marginBottom: "6rem", animation: "fadeIn 0.8s ease-out" }}>
           <h1 style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: "900", color: theme.textPrimary, marginBottom: "1.5rem", letterSpacing: "-0.02em" }}>
-            The Vision of <span style={{ background: "linear-gradient(135deg, #6366f1, #a78bfa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Smart City CMS</span>
+            The Vision of <span style={{ background: "linear-gradient(135deg, #6366f1, #a78bfa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Smart City</span>
           </h1>
           <p style={{ fontSize: "1.25rem", color: theme.textSecondary, maxWidth: "800px", margin: "0 auto", lineHeight: "1.6" }}>
             The <strong>Smart City Complaint Management System</strong> (CityZen) is a cutting-edge platform designed to bridge the gap between citizens and administration, 
@@ -59,7 +59,7 @@ const AboutUs = () => {
 
         {/* Why Us? */}
         <section style={{ ...cardStyle, textAlign: "center", background: theme.heroGradient }}>
-          <h2 style={{ fontSize: "2.25rem", fontWeight: "900", marginBottom: "3rem" }}>Why Choose Smart City CMS</h2>
+          <h2 style={{ fontSize: "2.25rem", fontWeight: "900", marginBottom: "3rem" }}>Why Choose Smart City</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "3rem" }}>
             {[
               { label: "Transparency", icon: "💎", desc: "Track every report in real-time." },
