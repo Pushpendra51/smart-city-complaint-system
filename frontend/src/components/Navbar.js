@@ -32,7 +32,7 @@ const Navbar = () => {
       <Link to="/" style={{ display: "flex", alignItems: "center", gap: "1rem", textDecoration: "none" }}>
         <img src={process.env.PUBLIC_URL + "/logo.png"} alt="Logo" style={{ width: "48px", height: "48px", objectFit: "cover", borderRadius: "50%" }} />
         <span style={{ fontSize: "1.5rem", fontWeight: "800", color: theme.textPrimary, letterSpacing: "-0.5px" }}>
-          Smart City <span style={{ color: theme.accentPurple }}>CMS</span>
+          CityZen <span style={{ color: theme.accentPurple }}>CMS</span>
         </span>
       </Link>
 

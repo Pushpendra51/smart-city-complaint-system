@@ -67,7 +67,7 @@ function LandingPage() {
               marginBottom: "2rem",
               boxShadow: theme.shadow,
             }}>
-              🏙️ Smart City Initiative
+              🏙️ CityZen Initiative
             </div>
             <h1 style={{ fontSize: "clamp(3rem, 6vw, 4.5rem)", fontWeight: "900", lineHeight: "1.1", marginBottom: "1.5rem", color: theme.textPrimary, letterSpacing: "-0.02em" }}>
               Voice Your City<br />
@@ -188,7 +188,7 @@ function LandingPage() {
 
       {/* Features */}
       <section style={{ padding: "8rem 2rem", background: theme.pageBg, textAlign: "center", transition: "all 0.3s" }}>
-        <h2 style={{ fontSize: "3rem", fontWeight: "900", marginBottom: "1rem", color: theme.textPrimary, letterSpacing: "-0.01em" }}>Why Choose Smart City CMS?</h2>
+        <h2 style={{ fontSize: "3rem", fontWeight: "900", marginBottom: "1rem", color: theme.textPrimary, letterSpacing: "-0.01em" }}>Why Choose CityZen CMS?</h2>
         <p style={{ color: theme.textSecondary, marginBottom: "4rem", fontSize: "1.15rem", maxWidth: "600px", margin: "0 auto 4rem" }}>Next-generation tools built for a more responsive and efficient urban life.</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
           {featureList.map((f, i) => (

@@ -62,7 +62,7 @@ app.get("/", (req, res) => {
   const mongoose = require("mongoose");
   const isConnected = mongoose.connection.readyState === 1;
   res.json({ 
-    message: "Smart City Complaint System Backend Running 🚀", 
+    message: "CityZen Complaint System Backend Running 🚀", 
     status: isConnected ? "ok" : "error",
     database: isConnected ? "connected" : "disconnected",
     timestamp: new Date().toISOString()

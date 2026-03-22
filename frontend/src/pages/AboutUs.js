@@ -27,7 +27,7 @@ const AboutUs = () => {
             The Vision of <span style={{ background: "linear-gradient(135deg, #6366f1, #a78bfa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Smart City CMS</span>
           </h1>
           <p style={{ fontSize: "1.25rem", color: theme.textSecondary, maxWidth: "800px", margin: "0 auto", lineHeight: "1.6" }}>
-            The <strong>Smart City Complaint Management System</strong> is a cutting-edge platform designed to bridge the gap between citizens and administration, 
+            The <strong>Smart City Complaint Management System</strong> (CityZen) is a cutting-edge platform designed to bridge the gap between citizens and administration, 
             empowering everyone to contribute to a better, more responsive urban environment.
           </p>
         </section>
@@ -59,7 +59,7 @@ const AboutUs = () => {
 
         {/* Why Us? */}
         <section style={{ ...cardStyle, textAlign: "center", background: theme.heroGradient }}>
-          <h2 style={{ fontSize: "2.25rem", fontWeight: "900", marginBottom: "3rem" }}>Why Choose Smart City CMS?</h2>
+          <h2 style={{ fontSize: "2.25rem", fontWeight: "900", marginBottom: "3rem" }}>Why Choose Smart City CMS</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "3rem" }}>
             {[
               { label: "Transparency", icon: "💎", desc: "Track every report in real-time." },

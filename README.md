@@ -1,4 +1,4 @@
-# Smart City Complaint System 🏙️
+# CityZen Complaint System 🏙️
 
 A full-stack MERN web application that allows citizens to submit urban complaints (potholes, lights, garbage, etc.) and enables city authorities to manage and resolve them through an admin panel.
 
@@ -14,7 +14,7 @@ A full-stack MERN web application that allows citizens to submit urban complaint
 ## 🗂 Project Structure
 
 ```
-smart-city-complaint-system/
+cityzen-complaint-system/
 ├── backend/          # Express.js REST API
 │   ├── config/       # MongoDB connection
 │   ├── middleware/   # JWT auth middleware

@@ -136,7 +136,7 @@ function Signup() {
             {authMode === "email" ? "Create account" : "Phone Signup"}
           </h1>
           <p style={{ color: theme.textMuted, textAlign: "center", marginBottom: "1.75rem", fontSize: "0.9rem" }}>
-            {authMode === "email" ? "Join the Smart City CMS platform today" : "Enter your mobile number to get started"}
+            {authMode === "email" ? "Join the CityZen CMS platform today" : "Enter your mobile number to get started"}
           </p>
 
           {/* Mode Toggle */}

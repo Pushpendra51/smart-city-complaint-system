@@ -71,7 +71,7 @@ const Footer = () => {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
               <img src={process.env.PUBLIC_URL + "/logo.png"} alt="Logo" style={{ width: "60px", height: "60px", objectFit: "cover", borderRadius: "50%" }} />
-              <span style={{ fontSize: "2rem", fontWeight: "900", letterSpacing: "-0.03em", color: theme.textPrimary }}>Smart City <span style={{ color: theme.accentPurple }}>CMS</span></span>
+              <span style={{ fontSize: "2rem", fontWeight: "900", letterSpacing: "-0.03em", color: theme.textPrimary }}>CityZen <span style={{ color: theme.accentPurple }}>CMS</span></span>
             </div>
             <p style={{ color: theme.textSecondary, fontSize: "1.05rem", lineHeight: "1.6", maxWidth: "320px" }}>
               Empowering urban communities with cutting-edge technology to create a more responsive, efficient, and better managed city for all.
@@ -163,7 +163,7 @@ const Footer = () => {
         color: theme.textMuted,
         fontSize: "0.9rem"
       }}>
-        <p style={{ fontWeight: "500" }}>© 2026 Smart City Complaint Management System | Developed by Pushpendra</p>
+        <p style={{ fontWeight: "500" }}>© 2026 CityZen Complaint Management System | Developed by Pushpendra</p>
         <div style={{ display: "flex", gap: "2rem" }}>
           <a href="#" style={{ color: "inherit", textDecoration: "none", transition: "color 0.2s" }} onMouseOver={e => e.target.style.color = theme.textSecondary} onMouseOut={e => e.target.style.color = "inherit"}>Privacy Policy</a>
           <a href="#" style={{ color: "inherit", textDecoration: "none", transition: "color 0.2s" }} onMouseOver={e => e.target.style.color = theme.textSecondary} onMouseOut={e => e.target.style.color = "inherit"}>Terms of Service</a>

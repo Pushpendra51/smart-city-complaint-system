@@ -150,7 +150,7 @@ router.post("/phone/send-otp", async (req, res) => {
         const twilio = require("twilio");
         const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
         await client.messages.create({
-          body: `Your Smart City CMS verification code is: ${otp}`,
+          body: `Your CityZen CMS verification code is: ${otp}`,
           from: process.env.TWILIO_PHONE_NUMBER,
           to: phone
         });
@@ -193,7 +193,7 @@ router.post("/phone/verify-otp", async (req, res) => {
     if (!user) {
       // Create new user for phone social auth
       const baseName = `Citizen_${phone.slice(-4)}`;
-      user = new User({ name: baseName, phone, email: `${phone}@smartcity.cms`, role: "user" });
+      user = new User({ name: baseName, phone, email: `${phone}@cityzen.cms`, role: "user" });
       await user.save();
     }
 

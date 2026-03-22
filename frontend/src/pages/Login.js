@@ -131,7 +131,7 @@ function Login() {
             {authMode === "email" ? "Welcome back" : "Phone Login"}
           </h1>
           <p style={{ color: theme.textMuted, textAlign: "center", marginBottom: "1.75rem", fontSize: "0.9rem" }}>
-            {authMode === "email" ? "Sign in to your Smart City CMS account" : "Enter your mobile number to get started"}
+            {authMode === "email" ? "Sign in to your CityZen CMS account" : "Enter your mobile number to get started"}
           </p>
 
           {/* Mode Toggle */}
